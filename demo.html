@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+
+<script src="Myajax.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var node = document.getElementById('demo');
+
+        Myajax({
+            method:'POST',
+            url:'test',
+            data:{
+                key1 : 'hello',
+                key2 : 'world'
+            },
+            success:function (res) {
+                node.appendChild("<div>"+ res + "</div>");
+            }
+        })
+    }
+</script>
+</body>
+</html>
